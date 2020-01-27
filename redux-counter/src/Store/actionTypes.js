@@ -1,2 +1,5 @@
 export const INCREMENT = 'INCREMENT'
 export const DECREMENT = 'DECREMENT'
+export const ifEven = 'ifEven'
+export const ifOdd = 'ifOdd'
+export const incAsync = 'incAsync'

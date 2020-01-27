@@ -1,4 +1,4 @@
-import {INCREMENT, DECREMENT} from '../actionTypes'
+import { INCREMENT, DECREMENT, ifEven, ifOdd, incAsync } from '../actionTypes'
 
 const initialState = {
     counter: 1
@@ -18,6 +18,22 @@ const counterReducer = (state = initialState, action) => {
 
         case DECREMENT:
             stateCopy.counter-- 
+            break;
+
+        case ifEven:
+            if(stateCopy.counter % 2 === 0) {
+                stateCopy.counter++
+            }
+            break;
+
+        case ifOdd:
+            if(stateCopy.counter % 2 !== 0) {
+                stateCopy.counter++
+            }
+            break;
+
+        case incAsync:
+            stateCopy.counter++
             break;
 
         default:
